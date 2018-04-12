@@ -26,7 +26,10 @@
     [super viewDidLoad];
     [self setConfig];
 }
-//
+
+/**
+ setConfig
+ */
 - (void)setConfig{
     self.titleArr = @[@"怎么样次啊能借到贷款？", @"审核期一般要多久？", @"怎么才能快速提高通过率？", @"如何修改登录密码？"];
     //
@@ -39,6 +42,11 @@
     [self.tableView registerClass:[CellTableViewCell class] forCellReuseIdentifier:NSStringFromClass([CellTableViewCell class])];
 }
 
+/**
+ 懒加载
+
+ @return <#return value description#>
+ */
 - (UITableView *)tableView{
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
